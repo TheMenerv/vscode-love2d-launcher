@@ -9,3 +9,6 @@
 
 1.1.2
 - Switch to Löve2d Launcher in output tab if integrated output is enable
+
+1.1.3
+- When Löve2D process finished, the focus was made in last file edited
