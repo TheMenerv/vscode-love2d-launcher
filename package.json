@@ -1,0 +1,85 @@
+{
+    "name": "love2d-launcher",
+    "displayName": "Löve2d Launcher",
+    "description": "Launches your project in Löve via a shortcut",
+    "version": "1.0.0",
+    "icon": "logo.png",
+    "galleryBanner": {
+        "color": "#6CBEE4",
+        "theme": "dark"
+    },
+    "publisher": "Menerv",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "Löve",
+        "love2d",
+        "launcher",
+        "game",
+        "engine",
+        "lua"
+    ],
+    "license": "MIT",
+    "activationEvents": [
+        "onCommand:love2DLauncher.launch"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "love2DLauncher.launch",
+                "title": "Launch Löve2D"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "love2DLauncher.launch",
+                "key": "Alt+L"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Löve2D Launcher configuration",
+            "properties": {
+                "love2DLauncher.path": {
+                    "type": "string",
+                    "description": "Set Path to your Löve2D executable.",
+                    "default": "C:\\Program Files\\LOVE\\love.exe"
+                },
+                "love2DLauncher.maxInstances": {
+                    "type": "integer",
+                    "description": "Set the max amount of instance you want to be able to spawn at the same time.",
+                    "default": 1
+                },
+                "love2DLauncher.useConsoleSubsystem": {
+                    "type": "boolean",
+                    "description": "Should Löve2D be executed with the console subsystem? (Windows only) If no, use the integrated VSCode output.",
+                    "default": false
+                },
+                "love2DLauncher.overWrite": {
+                    "type": "boolean",
+                    "description": "Should the launcher overwrite the first process when launching another one?",
+                    "default": true
+                },
+                "love2DLauncher.saveAllonLaunch": {
+                    "type": "boolean",
+                    "description": "Should VS Code save all opened files on Löve2D launch?",
+                    "default": true
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^1.8.5",
+        "vscode": "^0.11.0"
+    }
+}
