@@ -13,9 +13,10 @@ export function activate(context: vscode.ExtensionContext) {
         if(currentInstances.length < maxInstances || overWrite){
             var path : string = vscode.workspace.getConfiguration('love2DLauncher').get('path').toString();
             var useConsoleSubsystem = vscode.workspace.getConfiguration('love2DLauncher').get('useConsoleSubsystem');
-            var saveAllonLaunch = vscode.workspace.getConfiguration('love2DLauncher').get('saveAllonLaunch');
+            var saveAllOnLaunch = vscode.workspace.getConfiguration('love2DLauncher').get('saveAllOnLaunch');
+            var clearOutputOnLaunch = vscode.workspace.getConfiguration('love2DLauncher').get('clearOutputOnLaunch');
 
-            if (saveAllonLaunch){
+            if (saveAllOnLaunch){
                 vscode.workspace.saveAll();
             }
 
@@ -28,6 +29,11 @@ export function activate(context: vscode.ExtensionContext) {
             }
 
             if(!useConsoleSubsystem){
+                
+                if (clearOutputOnLaunch){
+                    output.clear()
+                }
+
                 var process = exec(path, [vscode.workspace.rootPath]);
 
                 process.stdout.on('data', function(data) {
@@ -60,7 +66,7 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() {
 }
 
-function on_exit(oprocess){
-    currentInstances.splice(oprocess.pid, 1);
+function on_exit(oProcess){
+    currentInstances.splice(oProcess.pid, 1);
     currentInstances = currentInstances.filter(Boolean);
 }
