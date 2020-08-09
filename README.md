@@ -12,3 +12,7 @@ This is a fork of [vscode-love-launcher](https://github.com/JanWerder/vscode-lov
 ## Configuration
 
 ![](https://raw.githubusercontent.com/TheMenerv/vscode-love2d-launcher/master/params.jpg)
+
+## Sources
+
+You are free to use, modify and redistribute [it](https://github.com/TheMenerv/vscode-love2d-launcher)!
