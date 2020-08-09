@@ -36,6 +36,6 @@ Il s'agit d'une extension basée sur [vscode-love-launcher](https://github.com/J
 
 ## Sources
 
-Vous êtes authorisés à utiliser, modifier et redistribuer les [sources](https://github.com/TheMenerv/vscode-love2d-launcher) !
+Vous êtes autorisés à utiliser, modifier et redistribuer les [sources](https://github.com/TheMenerv/vscode-love2d-launcher) !
 
 > **Apprenez à coder avec la meilleure formation en français sur [Gamecodeur](https://www.gamecodeur.fr)**
