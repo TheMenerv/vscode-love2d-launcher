@@ -6,3 +6,6 @@
 
 1.1.1
 - Fix issue on README
+
+1.1.2
+- Switch to Löve2d Launcher in output tab if integrated output is enable

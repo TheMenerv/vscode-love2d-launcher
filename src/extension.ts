@@ -29,6 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
             }
 
             if(!useConsoleSubsystem){
+
+                output.show();
                 
                 if (clearOutputOnLaunch){
                     output.clear()
