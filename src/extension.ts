@@ -8,7 +8,6 @@ export function activate(context: vscode.ExtensionContext) {
     var maxInstances = vscode.workspace.getConfiguration('love2DLauncher').get('maxInstances');
     var overWrite = vscode.workspace.getConfiguration('love2DLauncher').get('overWrite');
     output = vscode.window.createOutputChannel("Löve2D Launcher");
-    var codeWindow = vscode.window.activeTextEditor;
 
     let disposable = vscode.commands.registerCommand('love2DLauncher.launch', () => {
         if(currentInstances.length < maxInstances || overWrite){
@@ -31,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
 
             if(!useConsoleSubsystem){
 
-                output.show();
+                output.show(true);
                 
                 if (clearOutputOnLaunch){
                     output.clear()
@@ -45,7 +44,6 @@ export function activate(context: vscode.ExtensionContext) {
 
                 process.on('close', (code) => {
                     output.append(`Process exited with code ${code}`);
-                    codeWindow.show();
                 });
 
                 process.on('exit', on_exit.bind(null,process));
