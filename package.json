@@ -2,7 +2,7 @@
     "name": "love2d-launcher",
     "displayName": "Löve2d Launcher",
     "description": "Launches your project in Löve2D via a shortcut",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "icon": "logo.png",
     "galleryBanner": {
         "color": "#6CBEE4",
@@ -42,6 +42,14 @@
             {
                 "command": "love2DLauncher.launch",
                 "key": "Alt+L"
+            },
+            {
+                "command": "love2DLauncher.launch",
+                "key": "Ctrl+B"
+            },
+            {
+                "command": "love2DLauncher.launch",
+                "key": "F5"
             }
         ],
         "configuration": {

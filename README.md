@@ -8,7 +8,7 @@ This is a fork of [vscode-love-launcher](https://github.com/JanWerder/vscode-lov
 
 1. Configure your Path to your Löve executable
 2. Open your Löve Project in your workspace
-3. Press ALT+L to launch Löve
+3. Press ALT+L or CTRL+B or F5 to launch Löve
 
 ## Configuration
 
@@ -28,7 +28,7 @@ Il s'agit d'une extension basée sur [vscode-love-launcher](https://github.com/J
 
 1. Configurer le chemin vers l'exécutable Löve2d
 2. Ouvrir un projet Löve2D dans votre espace de travail
-3. Presser les touches ALT+L pour exécuter les sources avec Löve2D
+3. Presser les touches ALT+L ou CTRL+B ou F5 pour exécuter les sources avec Löve2D
 
 ## Configuration
 

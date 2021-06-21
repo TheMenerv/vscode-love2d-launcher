@@ -18,3 +18,6 @@
 
 1.1.5
 - Add github repo
+
+1.1.6
+- Add CTRL+B and F5 shortcut to run Love2D
